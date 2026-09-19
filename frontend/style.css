@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 40px 0 30px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 18px;
+    color: #64748b;
+}
+
+
+/* Dashboard */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+/* Cards */
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.value {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #64748b;
+}
+
+
+/* Recommendation */
+
+.recommendation {
+    grid-column: 1 / -1;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.recommendation h2 {
+    margin-bottom: 15px;
+}
+
+#recommendation {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
+    color: #64748b;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    .recommendation {
+        grid-column: auto;
+    }
+}

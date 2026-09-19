@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QueueLess - Smart Queue Monitoring</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>QueueLess</h1>
+            <p>Smart Queue Monitoring System</p>
+        </header>
+
+
+        <!-- Main Dashboard -->
+        <main>
+
+            <!-- People Waiting -->
+            <div class="card">
+                <h2>People Waiting</h2>
+                <div id="people-waiting" class="value">
+                    --
+                </div>
+                <p>People currently in queue</p>
+            </div>
+
+
+            <!-- Waiting Time -->
+            <div class="card">
+                <h2>Estimated Waiting Time</h2>
+                <div id="waiting-time" class="value">
+                    --
+                </div>
+                <p>Approximate waiting time</p>
+            </div>
+
+
+            <!-- Congestion -->
+            <div class="card">
+                <h2>Congestion Level</h2>
+                <div id="congestion" class="value">
+                    --
+                </div>
+                <p>Current crowd level</p>
+            </div>
+
+
+            <!-- Crowd Trend -->
+            <div class="card">
+                <h2>Crowd Trend</h2>
+                <div id="trend" class="value">
+                    --
+                </div>
+                <p>Current queue trend</p>
+            </div>
+
+
+            <!-- Recommendation -->
+            <div class="recommendation">
+
+                <h2>QueueLess Recommendation</h2>
+
+                <p id="recommendation">
+                    Waiting for queue data...
+                </p>
+
+            </div>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>QueueLess © 2026</p>
+        </footer>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
