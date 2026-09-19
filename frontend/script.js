@@ -2,7 +2,9 @@ async function loadQueueData() {
 
     try {
 
-        const response = await fetch("http://127.0.0.1:8000/queue");
+        const response = await fetch(
+            "http://127.0.0.1:8000/simulate"
+        );
 
         if (!response.ok) {
             throw new Error("Unable to get queue data");
@@ -11,27 +13,27 @@ async function loadQueueData() {
         const data = await response.json();
 
 
-        // Update People Waiting
+        // People waiting
         document.getElementById("people-waiting").textContent =
             data.people_waiting;
 
 
-        // Update Waiting Time
+        // Waiting time
         document.getElementById("waiting-time").textContent =
             data.estimated_wait_minutes + " min";
 
 
-        // Update Congestion
+        // Congestion
         document.getElementById("congestion").textContent =
             data.congestion_level;
 
 
-        // Update Crowd Trend
+        // Crowd trend
         document.getElementById("trend").textContent =
             data.crowd_trend;
 
 
-        // Update Recommendation
+        // Recommendation
         document.getElementById("recommendation").textContent =
             data.recommendation;
 
@@ -39,14 +41,17 @@ async function loadQueueData() {
 
     catch (error) {
 
-        console.error("Error:", error);
+        console.error("QueueLess Error:", error);
 
         document.getElementById("recommendation").textContent =
             "Unable to connect to QueueLess server.";
-
     }
 }
 
 
-// Load queue data when the page opens
+// Load data immediately
 loadQueueData();
+
+
+// Refresh queue data every 5 seconds
+setInterval(loadQueueData, 5000);
